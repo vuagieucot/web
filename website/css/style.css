@@ -1,0 +1,1328 @@
+* {
+    padding: 0;
+    margin: 0; 
+    outline: none;
+}  
+
+body {
+    background: white; 
+    width: 99%;
+    margin: auto;
+    font-family: 'Courgette', cursive;
+    color: #5a773b;
+}
+
+a {
+    text-decoration: none; 
+    color: #5a773b;
+} 
+
+hr {
+    width: 100%;
+    margin: auto;
+}
+
+li {
+    list-style-type: none;
+}
+
+/* header */
+header { 
+    width : 100%; 
+    padding-bottom: 5px; 
+    background-image: url("../images/flyingLeafBg.png"); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 0%;
+}
+
+/* logo */
+#logo { 
+    margin: auto; 
+    display: block;
+    width: 15%;
+}
+ 
+/* menus */ 
+#menu { 
+    width: 100%; 
+    float: right; 
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    display: flex; 
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: space-between;
+    clear: both; 
+}
+
+/* sub menu */ 
+
+#subMenu ul li {
+    display: inline-block; 
+    padding: 0px 10px; 
+    font-size: 1.3em; 
+} 
+
+#subMenu ul li a:hover {  
+    color: rgb(143, 143, 0);
+}
+
+.login {
+    font-size: 1.4em; 
+}
+
+/* main menu with dropdown button */   
+.dropdownButton {
+    border: none;  
+    padding: 5px 10px; 
+    margin-left: -4px;
+    background: none;  
+    font-size: 1.3em;
+    font-family: 'Courgette', cursive;
+    color: #5a773b;
+}
+
+.dropdown:first-child .dropdownButton { 
+    margin-left: 0px;
+}
+
+.dropdownButton:hover {  
+    color: rgb(143, 143, 0);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block; 
+}
+
+.dropdownContent {
+    display: none;
+    position: absolute;
+    left: 0px;
+    background-color: white;
+    z-index: 1;  
+}
+
+.dropdownContent a {
+    font-size: 2em;
+    color: black;
+    padding: 10px; 
+    display: block;
+    white-space: nowrap;
+    text-align: right;
+}
+
+.dropdownContent a:hover {
+    background-color: darkgrey; 
+} 
+
+.dropdown:hover .dropdownContent {
+    display: block;
+}  
+
+.dropdown:hover .subDropdown {
+    position: relative;
+    display: block;
+}
+
+.subContent {
+    display: none;
+    position: absolute;
+    top: 1px;
+    left: 100%;
+    background-color: rgb(61, 60, 57);
+    z-index: 1;  
+}  
+
+.subContent a {
+    color: white;
+}
+
+.subDropdown:hover .subContent {
+    display: block;
+}  
+
+/* local navigation section */
+.body-nav {  
+    background-image: url("../images/forestbg.png");
+    background-size: 100%;
+    padding: 30px;   
+    display: flex;
+    justify-content: space-evenly; 
+} 
+
+.body-nav section {  
+    text-align: center;   
+    width: 33%;   
+    perspective: 5000px;
+}
+
+.flip { 
+    position: relative;
+    width: 100%; 
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style : preserve-3d;
+    height: auto;
+}  
+
+.body-nav section:hover .flip {
+    transform: rotateY(180deg);
+}
+
+.img_description, .img_show { 
+    width: 100%;  
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.img_description {
+    position: absolute; 
+    padding-top: 70%;  
+    font-size: 2em; 
+    color: #008d47; 
+}
+
+.img_show {
+    left: 0;
+    top: 0;
+    background-color: white;
+    color: white;
+    transform: rotateY(180deg);
+}  
+
+.body-nav a {
+    display: block;
+}
+
+/* body articles */
+
+#AccommodationInfo {
+    background-image: url("../images/dayana-brooke-dZbBlss3FyE-unsplash.jpg");
+}
+
+#FoodInfo{
+    background-image: url("../images/architecture-70920_1280.jpg");
+}
+
+#ActivityInfo {
+    background-image: url("../images/girl-918706_1920.jpg");
+}
+
+.body-article {
+    position: relative;
+    overflow: hidden;
+    padding: 20px;  
+    background-size: 100%;  
+    background-repeat: no-repeat; 
+    color: rgb(1, 59, 4);
+}
+
+.body-article .content-left, .body-article .content-right {
+    margin-bottom: 15%;
+    width: 48%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.body-article .content-left {
+    float: left;
+    clear: both;
+}
+
+.body-article .content-right {
+    float: right;
+    clear: both;
+} 
+
+article h2 { 
+    margin-bottom: 4%;
+    font-size: 4em; 
+}
+
+article h4 {
+    font-size: 3em;
+    margin-top: 3%; 
+}
+
+article p {
+    font-size: 2em; 
+}
+
+.booknow {  
+    display: inline-block;
+    text-align: center; 
+    padding: 20px 34px; 
+    font-size: 1.5em;
+    margin: 4px 2px; 
+    background-color: rgb(1, 59, 4);
+}
+
+.booknow span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    color: white;
+}
+
+.booknow span:after {
+    /* Reference: https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+} 
+
+.booknow:hover span {
+    padding-right: 25px;
+}
+
+.booknow:hover span:after {
+    opacity: 1;
+    right: 0;
+} 
+
+.booknow-right {  
+    position: absolute; 
+    right: 4%;
+    bottom: 4%;
+}
+
+.booknow-left { 
+    position: absolute; 
+    left: 4%;
+    bottom: 4%;
+}
+/* footer */
+footer {  
+    text-transform: uppercase;
+    background-image: linear-gradient(white, rgb(206, 247, 213)); 
+    font-family: 'Kalam', cursive;
+}  
+
+footer #copyright {
+    text-align: right;
+    padding: 10px;
+    text-transform: none;
+}
+
+#footer-media {
+    background-color: white;
+    padding: 1% 30%; 
+    margin: auto;
+    display:flex;
+    justify-content: space-around;
+} 
+
+#footer-menu {  
+    padding: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#footer-menu h3,#footer-menu h4 {
+    margin-top:20px;
+    margin-bottom: 20px; 
+} 
+
+#footer-menu p,#footer-menu li {
+   padding: 10px;
+   padding-left: 0px; 
+} 
+
+#footer-menu input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer-menu div {
+    padding-left: 5px;
+}
+
+#footercontact-phone::before {
+    content: url("../images/phoneicon.png");  
+    margin-right: 10px;
+}
+
+#footercontact-email::before {
+    content: url("../images/emailicon.png");  
+    margin-right: 10px;
+} 
+
+.logo-image {
+    width: 100%;
+}
+
+#subcribe input[type=text] {
+    width: 100%;
+    padding: 10px 10px; 
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;    
+}
+
+#subcribe input[type=submit] { 
+    background-color: rgb(1, 59, 4);
+    color: white;
+    padding: 10px 10px; 
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* appartment accommodation page */  
+.nav-header {
+    font-size: 4em; 
+    padding-top: 20%; 
+}  
+
+.accommodation-showcase { 
+    position: relative; 
+    width: 90%;
+    margin: auto;   
+} 
+
+.post {  
+    min-height: 500px;  
+    overflow: hidden;
+    padding-top: 15px;
+}
+
+.post figure {  
+    height: 100%; 
+    width: 60%; 
+}
+
+.post figure img {
+    width: 100%;
+    height: 100%;
+}  
+
+.description-post {
+    position: absolute;
+    right: 0;
+    top: 0; 
+    width: 40%;  
+    font-size: 0.5em;
+    background-color: white;
+    height: 100%;
+    padding-top: 15px;
+    padding-left: 10px;
+}
+
+#nav-descript {
+    width: 95%;
+    margin: auto;
+    margin-top: 10px; 
+    display: flex;
+    flex-direction: row;  
+}
+
+#about-nav { 
+    min-height: 500px;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+} 
+
+.description-parag {
+    min-height: 500px; 
+    border: 2px solid rgb(0, 128, 79); 
+    margin: auto; 
+    padding: 20px; 
+    padding-left:40px;
+    padding-right:40px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 122, 61, 0.2);
+}
+
+.description-article { 
+    width: 40%;
+    margin-top: 20px;
+}
+
+.description-parag h1 {
+    font-size: 1.5em;
+}
+
+.description-parag h1,.description-parag h4 {
+    padding-bottom: 20px; 
+}
+
+.description-parag p {
+    padding-bottom: 10px;
+}
+
+.nav-button {
+    color: white;
+    font-family: 'Courgette', cursive;
+    background-color: rgb(8, 182, 115);
+    border: none;
+    font-size: 1.5em; 
+    padding: 16px 30px;
+    text-align: center;
+    text-decoration: none; 
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background: none;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+    color: #5a773b; 
+}
+
+.current-button {  
+    border: 3px rgb(8, 182, 115) solid;
+    background-color: rgb(255, 255, 255);
+    color:  rgb(8, 182, 115);
+} 
+
+#weather-table tr {
+    padding: 5px;
+}
+
+#weather-table tr td {
+    padding: 5px;
+}
+
+.rate {
+    border: 2px rgb(224, 255, 167) solid;
+    padding: 20px;
+    margin-bottom: 10px; 
+    display: flex; 
+    flex-direction: column;
+}
+
+.rate-half {
+    padding: 20px;
+    display: flex; 
+    align-items: flex-start;
+}
+
+.rate-section {
+    padding: 20px;
+    padding-right: 8%;  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+} 
+
+#rateComment, #message, .form-input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid rgb(8, 182, 115);
+}
+
+.contact-request {
+    width: 50%;
+    margin: auto;
+    border: 2px rgb(8, 182, 115) solid;
+    padding: 40px;
+}
+
+#rating-parag, #social-parag {
+    width: 90%;
+    margin-top: 20px;
+}
+
+.fixed-menu {
+    position: fixed;
+    top:0; 
+    z-index: 2; 
+    background-image: linear-gradient(rgba(206, 247, 213,0.8), rgba(255, 255, 255,0.8));
+}
+
+.nonfixed-menu { 
+    background-image: linear-gradient(rgb(206, 247, 213), rgb(255, 255, 255));
+} 
+
+.link, .current {
+    color: rgb(6, 112, 119);
+}
+
+.accommodation-local-nav {
+    display: flex;
+    justify-content: center;
+}
+
+.accommodation-local-nav a {
+    padding: 20px;
+    font-size: 2em;
+}
+
+.averageRate {
+    max-width: 15%;
+    margin-bottom: 20px;
+} 
+
+#login-page {
+    background-image: url("../images/landscape-mountains-nature-sky-129105.jpg");
+    background-size: cover; 
+} 
+
+#expand {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    background-color: white;
+    z-index:1;
+}
+
+#cover {
+    position: absolute;
+    width: 50%;
+    height: 100%; 
+    left: 50%;
+    z-index: 2;
+}
+
+#login-or-register {
+    position: relative;
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
+    height: 600px;
+    background-color: white;
+    display: flex;
+}
+
+#login, #register {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: relative;
+    font-size: 1.5em;
+}
+
+.login-header {
+    padding: 20px;
+    padding-top:0;
+    text-align: center;
+    position: relative;
+    font-size: 1.5em;
+}
+
+.login-header img {
+    max-width: 10%;
+    position: absolute; 
+    left:0;
+    top:0;
+}
+
+.login-form form section {
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-form a { 
+    padding-left: 30%; 
+    cursor: pointer; 
+}
+
+.login-form input[type=text], .login-form input[type=password] {
+    border-radius: 5px;
+    padding: 2px 5px;
+    border: 1px gray solid;
+}
+
+.buttons button {
+    border: none;
+    font-family: 'Courgette', cursive;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.buttons button:hover { 
+    color: rgb(8, 182, 115);
+    background-color: black;
+}
+
+.transitor {
+    position: absolute;
+    top: 55%; 
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: rgb(8, 182, 115);
+    color: white;
+}
+
+.login-button {
+    padding: 5px 10px;
+    color: rgb(8, 182, 115);
+    background-color: white;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+#login .transitor {
+    right: 0;
+    padding-right: 0;
+}
+
+#login .login-button {
+    margin-left: 25%;
+    margin-top: 45%;
+}
+
+#register .login-button {
+    margin-left: 50%;
+    margin-top: 35%;
+}
+
+#register .transitor {
+    padding-left: 0;
+    left: 0;
+}  
+
+#booking-section {
+    padding: 20px; 
+    width: 70%;
+    margin:auto;
+    margin-top: 20px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+    min-height: 500px;
+}
+
+#booking-section ul {
+    display: flex;
+    justify-content: center; 
+}
+
+.process-option { 
+    padding: 15px 15px;
+    padding-right: 0;
+    background-color: rgb(56, 131, 27);
+    color: white; 
+}
+
+.process-current {
+    color: rgb(198, 255, 66);
+}
+
+#booking-section ul li:first-child {
+    padding-left: 20px;
+}
+
+#booking-section ul li:last-child {
+    padding-right: 20px;
+}
+
+.tri-angle { 
+    clip-path: polygon(0 0, 0% 100%, 100% 50%); 
+    padding: 15px 20px;
+}
+
+.tri-angle { 
+    clip-path: polygon(2% 0, 100% 50%, 2% 100%, 0% 100%, 98% 50%, 0 0);
+    background-color: white;
+    padding: 15px 20px;
+}
+
+.form-half {  
+    display: flex;
+    justify-content: flex-start; 
+}
+
+#book-form {
+    width: 67%;
+    margin:auto;
+    margin-top: 40px;
+    padding: 10px;
+    background-color: rgb(56, 131, 27);
+    color: white; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-book {
+    padding: 20px; 
+    display: flex;
+    flex-direction: column; 
+}
+
+.form-book input,.form-book select {
+    padding: 10px 20px;
+}
+
+.form-book input[type=date] {
+    padding: 8px 20px;
+}
+
+#promo { 
+    width: 8em;
+}
+
+#submit-form { 
+    padding: 20px 0px;
+    text-align: center;
+}
+
+#submit-stay { 
+    margin: auto;
+    border: none;
+    background: none;
+    font-family: 'Courgette', cursive;
+    color: #5a773b;
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 10px 15px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2); 
+}
+
+#submit-stay:hover {
+    background-color: rgb(56, 131, 27);
+    color: white;
+} 
+
+.go-back {
+    border: none; 
+    background: none;
+    width: 69%;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.go-back img { 
+   cursor: pointer;
+   max-width: 7%;
+}
+
+.choose-method {
+    text-align: center;
+}
+
+.choose-method p {
+    font-size: 1.5em;
+    padding-bottom: 20px;
+}
+
+.choose-payment-option { 
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border: none;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2); 
+    border-radius: 30px;
+    background: none;
+    cursor: pointer;
+}
+
+.choose-payment-option:hover { 
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.pay-stay-confirm {
+    width: 70%;
+    margin: auto;  
+} 
+
+.pay-stay {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+} 
+
+#stay-credit-form, #pay-summary-form {
+    width: 50%;  
+}
+
+#fill-form, #stay-summary {
+    display: flex;
+    flex-direction: column; 
+    padding: 20px;   
+}  
+
+#fill-form {  
+    color: white;
+    background-color: rgb(56, 131, 27);  
+}
+
+.pay-stay-header { 
+    padding: 5px 15px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border: 1px rgb(56, 131, 27) solid;   
+    border-bottom: none;
+    display: inline-block; 
+}
+
+#fill-form label {
+    padding-bottom: 10px;
+}
+
+#fill-form input {
+    margin-bottom: 40px; 
+    padding: 10px 20px;
+}
+
+.small-section {
+    width: 76%; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+.small-section input {
+    width: 1.8em;
+}
+
+.f-cvv, .exdate {
+    display: flex;
+    flex-direction: column;
+} 
+
+#stay-summary {
+    padding: 0;
+}
+
+#inside-summary {
+    padding: 20px;
+    position: relative; 
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px rgb(56, 131, 27) solid;
+    border-left: none;
+} 
+
+.stay-chocie {
+    width: 30%;
+}  
+
+#stay-summary span {
+    position: absolute;
+    right: 20px;
+}
+
+#inside-summary p {
+    padding-top: 20px;
+}
+
+#inside-summary p:first-of-type {
+    padding-top: 0;
+}
+
+.type-stay {
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    font-size: 1.5em;
+}
+
+.pay-buttons {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.pay-buttons button { 
+    color: #5a773b; 
+    font-family: 'Courgette', cursive;
+    font-size: 2em;
+    padding: 5px 25px;
+    cursor: pointer;
+}
+
+.pay-cancel-button {
+    background: none;
+    border: none;
+}
+
+.pay-confirm-button {
+    background: none;
+    border: 1px solid rgb(56, 131, 27);
+    border-radius: 20px;
+}
+
+.pay-cancel-button:hover { 
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;   
+}
+
+.pay-confirm-button:hover {
+    background-color: rgb(56, 131, 27);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+#book-process .contact-request {
+    border: none;
+}
+
+#cancel-submit-email {
+    color: #5a773b; 
+    padding: 40px;
+    font-size: 2em; 
+    text-align: center;
+} 
+
+#cancel-email {
+    font-size: 1.2em;
+    padding: 10px 30px; 
+    border-radius: 30px;  
+    text-align: center;
+}
+
+#submit-cancel-email {
+    padding: 5px 20px;
+    font-size: 1em;
+    background: none; 
+    color: #5a773b; 
+    border: none;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#submit-cancel-email:hover {
+    background: rgb(56, 131, 27);
+    color: white;
+}
+
+#reservation-show {
+    width: 40%;
+    margin: auto;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+#reservation-show p:first-child {
+    padding: 20px;  
+    padding-left: 0;
+}
+
+.list-reservation-show { 
+    border: 1px solid rgb(56, 131, 27);
+    border-radius: 40px;
+    padding: 20px;
+    text-align: right;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.list-reservation-show:hover { 
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.list-reservation-show span {
+    text-align: left;
+    float: left;
+    color: #5a773b; 
+    color: red;
+} 
+
+#cancel-reservation-summary {
+    width: 30%;
+    margin: auto;
+    padding: 20px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border: 1px solid rgb(56, 131, 27);
+    border-radius: 40px;
+    margin-top: 20px;
+}
+
+#cancel-reservation-summary p, #cancel-reservation-summary label {
+    padding: 20px;
+}
+
+#cancel-reservation-summary p:first-child {
+    text-align: center;
+}
+
+#cancel-reservation-summary hr {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+#cancel-reservation-summary input, #cancel-reservation-summary button { 
+    padding: 5px 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    display: block;
+}
+
+#cancel-reservation-summary button {
+    background: none;
+    font-size: 1.5em;
+    border: 1px solid rgb(56, 131, 27);
+    color: #5a773b;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#cancel-reservation-summary button:hover {
+    background: rgb(56, 131, 27);
+    color: white;
+}
+
+.contact-request h1 {
+    text-align: center;
+}
+
+#book-process p:last-child {
+    text-align: center;
+}
+
+#book-process p:last-child span {
+    color: rgb(55, 224, 202);
+    cursor: pointer;
+}
+
+.offer-options-stay {
+    padding-left: 40px;
+}
+
+.offer-options-stay li {
+    list-style-type: circle;
+}
+
+.offer-to-contact {
+    color: rgb(55, 224, 202);
+}
+
+#first-event-img {
+    width: 40%;
+}
+
+#second-event-img {
+    width: 20%;
+}
+
+.competition-img {
+    width: 50%;
+    overflow: hidden;
+    display: block;
+    margin: auto;   
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.competition-nav-button {
+    cursor: pointer;
+}
+
+#competition-field, #lion-img {
+    width: 40%;
+    margin: auto;
+}
+
+.competition-section p, .competition-section h4 {
+    font-size: 1em;
+}
+
+.competition-section h1 {
+    font-size: 1.2em;
+}
+
+.competition-section h4 {
+    margin-top: 0;
+}
+
+#wildlife-parag, #social-parag, #moment-parag {
+    width: 70%;
+    margin-top: 20px;
+}
+
+.wildlife-img {
+    height: 200px; 
+}
+
+.wildlife-imgs {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.wildlife-imgs section {
+    display: flex;
+    justify-content: space-evenly;
+} 
+
+.wildlife-imgs li {
+    padding: 20px;
+}
+
+.description-parag p {
+    font-size: 1em;
+}
+
+.description-parag h4 {
+    font-size: 1.2em;
+}
+
+.description-parag h2, .description-parag h2 {
+    margin-top: 20px;
+    font-size: 1.5em; 
+}  
+
+#reference-parag p {
+    padding-top: 20px;
+}
+
+.camp-img { 
+    height: 250px; 
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    margin-top: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.gallery li {
+    display: inline-block;
+}
+
+.gallery-img {
+    height: 120px;
+}
+
+.small-gallery {
+    position: relative;
+    width: 40%;
+    margin: auto; 
+    margin-top: 20px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2); 
+} 
+
+.small-gallery-show {
+    display: none;
+    background-color: rgba(128, 128, 128, 0.288);
+    text-align: center;
+}
+
+.img-box-item, .to-next, .to-previous {
+    cursor: pointer;
+} 
+
+.small-gallery-show img {
+    height: 300px;
+}
+
+.img-slides {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px; 
+}
+
+.img-slides img {
+    height: 100px;
+}
+
+.img-box-item {
+    opacity: 0.5;
+}
+
+.img-box-item:hover  {
+    opacity: 1;
+}
+
+.current-img-show {
+    opacity: 1;
+}
+
+.to-next, .to-previous {
+    position: absolute;
+    top: 30%;
+    padding: 5px 10px;
+}
+
+.to-previous {
+    left: 0;
+}
+
+.to-next {
+    right: 0;
+}
+
+.to-previous:hover, .to-next:hover {
+    background-color: rgba(88, 100, 94, 0.253);
+}
+
+.small-gallery-index {
+    position: absolute;  
+}
+
+#img-caption {
+    padding: 8px 16px;
+    background-color: rgb(1, 59, 4);
+    color: white;
+}
+
+#small-gallery-header {
+    padding: 10px;
+}
+
+#small-gallery-footer {
+    padding: 5px;
+}
+
+#small-gallery-footer a:hover {
+    color: rgb(200, 255, 0);
+}
+
+#term-parag {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#term-parag h2 {
+    padding-top: 40px;
+    font-size: 1.1em;
+}
+
+.reference-link a {
+    color: rgb(208, 255, 0);
+}
+
+.invisible {
+    display: none; 
+}
+
+@media (max-width: 1024px) {
+    .img-slides img {
+        height: 50px;
+    }
+
+    .body-article {
+        background-size: 100% 100%;
+    }
+
+    .camp-img {
+        width: 60%;
+    }
+
+    .rate {
+        font-size: 0.6em;
+    }
+
+    .form-half {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1400px) {
+    .rate-half {
+        flex-direction: column;
+    }  
+    
+    #message {
+        width: 80%;
+    }
+}
